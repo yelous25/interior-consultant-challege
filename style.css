@@ -1,0 +1,235 @@
+@font-face {
+	font-family: "Crimson Pro";
+	src: url(/fonts/CrimsonPro-VariableFont_wght.ttf);
+}
+@font-face {
+	font-family: Montserrat;
+	src: url(./fonts/Montserrat.ttf);
+}
+@font-face {
+	font-family: Lora;
+	src: url(./fonts/Lora-VariableFont_wght.ttf);
+}
+
+html, body {
+    margin: 0;
+    height: 100%;
+}
+
+body {
+	margin: 0;
+	background-color: #181719;
+	color: #ffffff;
+}
+
+a {
+	color: white;
+	text-decoration: none;
+}
+
+div.container {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	width: 100%;
+	height: 100%;
+}
+
+/** Header */
+
+.header-container {
+	display: flex;
+	justify-content: space-between;
+	align-items: baseline;
+	width: 100%;
+	margin-top: 2.625rem;
+	margin-bottom: 10.563rem;
+}
+
+header h2.title {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 6.375rem;
+	height: 2rem;
+	margin: 0;
+	margin-left: 4.813rem;
+	box-sizing: border-box;
+	border: 1px solid #ffffff;
+	font-family: "Crimson Pro";
+	font-style: normal;
+	font-weight: 200;
+	font-size: 0.875rem;
+	line-height: 1rem;
+	text-transform: uppercase;
+}
+
+.navbar {
+	margin-right: 4.75rem;
+}
+
+.navbar ul.menu {
+	display: flex;
+	margin: 0;
+	list-style: none;
+}
+
+ul.menu .menu-item {
+	font-family: "Montserrat";
+	font-style: normal;
+	font-weight: 500;
+	font-size: 1.125rem;
+	line-height: 1.375rem;
+}
+
+ul.menu .menu-item:nth-child(n + 2) {
+	margin-left: 5.375rem;
+}
+
+ul.menu .menu-item a:active {
+	padding-bottom: 0.5rem;
+	font-weight: 700;
+	border-bottom: 2px solid #ffffff;
+}
+
+/* * Main */
+
+.main-container {
+	display: flex;
+	justify-content: center;
+	width: 100%;
+    margin-bottom: 15rem;
+}
+
+section.article {
+	margin-top: 8.5rem;
+    margin-left: 1rem;
+    margin-right: 8.75rem;
+}
+
+section.article h1.title {
+	width: 22.813rem;
+	margin: 0;
+	margin-bottom: 2.5rem;
+	font-family: "Lora";
+	font-style: normal;
+	font-weight: 500;
+	font-size: 3rem;
+	line-height: 3.813rem;
+}
+
+section.article p {
+	width: 25.625rem;
+	margin: 0;
+	margin-bottom: 3rem;
+	font-family: "Montserrat";
+	font-style: normal;
+	font-weight: 400;
+	font-size: 1.5rem;
+	line-height: 1.813rem;
+    word-wrap: break-word;
+    word-break: keep-all;
+}
+
+section.article a.read-more {
+	font-family: "Montserrat";
+	font-style: normal;
+	font-weight: 700;
+	font-size: 1.125rem;
+	line-height: 1.375rem;
+}
+
+section.illustration {
+    /* display: flex;
+    flex-direction: column; */
+	margin-right: 1rem;
+	width: 46.063rem;
+    height: 34.688rem;
+
+
+    background: #00ff00;
+    
+    
+}
+.illustration figure {
+	display: flex;
+	margin: 0;
+}
+.illustration figure img.illustration {
+	width: 46.063rem;
+}
+
+.illustration .card {
+    display: flex;
+    flex-direction: column;
+	width: 25.625rem;
+	height: 11.813rem;
+    background: #181719;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+
+    position: relative;
+    left: 18.438rem;
+    bottom: 4.875rem;
+    
+}
+
+.illustration .card .card-header {
+	display: flex;
+	margin-top: 1.125rem;
+	margin-left: 1.938rem;
+}
+.illustration .card figure {
+	margin-right: 1.188rem;
+}
+.illustration .card figure img.profil {
+	width: 3.125rem;
+	border-radius: 50%;
+}
+.illustration .card .card-header h3 {
+	margin: 0;
+}
+.illustration .card .card-header h3.profil-name {
+	margin-bottom: 0.5rem;
+	font-family: "Montserrat";
+	font-style: normal;
+	font-weight: 500;
+	font-size: 0.875rem;
+	line-height: 1.063rem;
+}
+
+.illustration .card .card-header h3.profil-metier {
+	font-family: "Montserrat";
+	font-style: normal;
+	font-weight: 500;
+	font-size: 0.75rem;
+	line-height: 0.938rem;
+	font-family: "Montserrat";
+	color: #828282;
+}
+
+.illustration .card p.card-body {
+	width: 17.938rem;
+	margin-left: 1.625rem;
+	font-family: "Lora";
+	font-style: normal;
+	font-weight: 700;
+	font-size: 1.5rem;
+	line-height: 1.938rem;
+}
+
+.footer-container {
+    margin-bottom: 1.5rem;
+	font-family: "Montserrat";
+	font-style: normal;
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 17px;
+	text-align: center;
+	color: #a9a9a9;
+}
+
+.footer-container .pseudonyme {
+    font-weight: 700;
+    text-decoration: underline;
+}
