@@ -11,9 +11,10 @@
 	src: url(./fonts/Lora-VariableFont_wght.ttf);
 }
 
-html, body {
-    margin: 0;
-    height: 100%;
+html,
+body {
+	margin: 0;
+	height: 100vh;
 }
 
 body {
@@ -64,7 +65,16 @@ header h2.title {
 	text-transform: uppercase;
 }
 
+header .menu-icon {
+	position: absolute;
+	top: 1.5938rem;
+	right: 0.7969rem;
+	visibility: hidden;
+}
+
 .navbar {
+	display: block;
+	visibility: visible;
 	margin-right: 4.75rem;
 }
 
@@ -86,7 +96,8 @@ ul.menu .menu-item:nth-child(n + 2) {
 	margin-left: 5.375rem;
 }
 
-ul.menu .menu-item a:active {
+.menu-item a:hover,
+.menu-item a:focus {
 	padding-bottom: 0.5rem;
 	font-weight: 700;
 	border-bottom: 2px solid #ffffff;
@@ -98,13 +109,12 @@ ul.menu .menu-item a:active {
 	display: flex;
 	justify-content: center;
 	width: 100%;
-    margin-bottom: 15rem;
+	margin-bottom: 15rem;
 }
 
 section.article {
 	margin-top: 8.5rem;
-    margin-left: 1rem;
-    margin-right: 8.75rem;
+	margin-right: 8.75rem;
 }
 
 section.article h1.title {
@@ -127,8 +137,8 @@ section.article p {
 	font-weight: 400;
 	font-size: 1.5rem;
 	line-height: 1.813rem;
-    word-wrap: break-word;
-    word-break: keep-all;
+	word-wrap: break-word;
+	word-break: keep-all;
 }
 
 section.article a.read-more {
@@ -140,16 +150,8 @@ section.article a.read-more {
 }
 
 section.illustration {
-    /* display: flex;
-    flex-direction: column; */
-	margin-right: 1rem;
 	width: 46.063rem;
-    height: 34.688rem;
-
-
-    background: #00ff00;
-    
-    
+	height: 34.688rem;
 }
 .illustration figure {
 	display: flex;
@@ -160,18 +162,15 @@ section.illustration {
 }
 
 .illustration .card {
-    display: flex;
-    flex-direction: column;
+	display: flex;
+	flex-direction: column;
 	width: 25.625rem;
 	height: 11.813rem;
-    background: #181719;
+	background: #181719;
 	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-
-
-    position: relative;
-    left: 18.438rem;
-    bottom: 4.875rem;
-    
+	position: relative;
+	right: -18.438rem;
+	bottom: 4.875rem;
 }
 
 .illustration .card .card-header {
@@ -219,7 +218,7 @@ section.illustration {
 }
 
 .footer-container {
-    margin-bottom: 1.5rem;
+	padding-bottom: 1.5rem;
 	font-family: "Montserrat";
 	font-style: normal;
 	font-weight: 500;
@@ -230,6 +229,200 @@ section.illustration {
 }
 
 .footer-container .pseudonyme {
-    font-weight: 700;
-    text-decoration: underline;
+	font-weight: 700;
+	text-decoration: underline;
+}
+
+@media only screen and (min-width: 2000px) {
+	section.article {
+		margin-right: 16rem;
+	}
+}
+
+@media only screen and (max-width: 1439px) {
+	section.article {
+		margin-left: 4.813rem;
+		margin-right: auto;
+	}
+
+	section.illustration {
+		margin-left: 1rem;
+		margin-right: 4.75rem;
+	}
+}
+
+@media only screen and (max-width: 1300px) {
+	.main-container {
+		width: fit-content;
+		flex-direction: column;
+		margin-left: auto;
+		margin-right: auto;
+		/* flex-wrap: wrap; */
+	}
+
+	section.article {
+		margin-left: 1rem;
+		margin-right: 1rem;
+		margin-bottom: 2.3125rem;
+	}
+
+	section.illustration {
+		margin-left: 1rem;
+		margin-right: 1rem;
+	}
+}
+
+@media only screen and (max-width: 800px) {
+	.main-container {
+		width: fit-content;
+		flex-direction: column;
+		margin-left: auto;
+		margin-right: auto;
+		margin-bottom: 61px;
+		/* flex-wrap: wrap; */
+	}
+
+	.header-container {
+		margin-top: 1.1875rem;
+		margin-bottom: 1.5625rem;
+	}
+
+	.header-container h2.title {
+		margin-left: 0.75rem;
+	}
+
+	.header-container .menu-icon {
+		visibility: visible;
+		font-size: x-large;
+		z-index: 3;
+	}
+
+	.navbar {
+		display: none;
+	}
+
+	.overlayMenu {
+		visibility: visible;
+		display: flex;
+		justify-content: center;
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		padding-top: 16.125rem;
+		background-color: #181719;
+		z-index: 2;
+	}
+
+	.overlayMenu ul.menu {
+		display: flex;
+		flex-direction: column;
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+
+	.overlayMenu ul.menu li.menu-item {
+		width: fit-content;
+		margin: 1rem;
+		padding: 0;
+	}
+
+	section.article {
+		width: calc(100vw - 1.625rem);
+		margin: 0;
+		margin-bottom: 2.3125rem;
+	}
+
+	section.article h1.title {
+		margin-bottom: 1.5625rem;
+		font-size: 2.625rem;
+	}
+
+	section.article p {
+		width: 20rem;
+		margin-bottom: 1.5625rem;
+		font-size: 20px;
+	}
+
+	section.illustration {
+		display: flex;
+		flex-direction: column;
+		width: fit-content;
+		height: fit-content;
+		min-width: 21.9375rem;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	section .illustration {
+		height: auto;
+	}
+
+	.illustration figure img.illustration {
+		width: calc(100vw - 1.625rem);
+		min-width: 21.9375rem;
+	}
+
+	.illustration .card {
+		align-self: flex-end;
+		width: 18.75rem;
+		height: 8.625rem;
+		position: relative;
+		right: 0.6875rem;
+		bottom: 51.32px;
+		z-index: 1;
+	}
+	.illustration .card .card-header {
+		display: flex;
+		margin-top: 1.125rem;
+		margin-left: 1.938rem;
+	}
+	.illustration .card figure {
+		margin-right: 14px;
+	}
+	.illustration .card figure img.profil {
+		width: 2.3rem;
+	}
+	.illustration .card .card-header h3 {
+		margin: 0;
+	}
+	.illustration .card .card-header h3.profil-name {
+		margin-bottom: 5.85px;
+		font-size: 12px;
+		line-height: 14.63px;
+	}
+
+	.illustration .card .card-header h3.profil-metier {
+		font-size: 10px;
+		line-height: 12.19px;
+	}
+
+	.illustration .card p.card-body {
+		width: 210px;
+		margin-left: 19px;
+		font-size: 18px;
+		line-height: 23.04px;
+	}
+}
+
+@media only screen and (max-width: 500px) {
+	section.article h1.title {
+		margin-bottom: 1.5625rem;
+		font-size: 2.25rem;
+		line-height: 2.88rem;
+	}
+
+	section.article p {
+		width: 15.625rem;
+		margin-bottom: 1.5625rem;
+		font-size: 0.875rem;
+		line-height: 1.0669rem;
+	}
+
+	section.article a.read-more {
+		font-size: 0.875rem;
+		line-height: 1.0669rem;
+	}
 }
