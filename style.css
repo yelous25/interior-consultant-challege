@@ -48,12 +48,10 @@ div.container {
 }
 
 header h2.title {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	width: 6.375rem;
-	height: 2rem;
+	/* width: 6.375rem; */
+	/* height: 2rem; */
 	margin: 0;
+	padding: .5rem;
 	margin-left: 4.813rem;
 	box-sizing: border-box;
 	border: 1px solid #ffffff;
@@ -61,7 +59,7 @@ header h2.title {
 	font-style: normal;
 	font-weight: 200;
 	font-size: 0.875rem;
-	line-height: 1rem;
+	line-height: 15.56px;
 	text-transform: uppercase;
 }
 
